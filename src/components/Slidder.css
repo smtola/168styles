@@ -1,0 +1,22 @@
+.zoom-out {
+    perspective: 1000px;
+}
+
+.zoom-out__slide div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.zoom-out__slide img {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.swiper-pagination-bullet-active,.swiper-pagination-bullet{
+    background:#8d1317 !important;
+    opacity: 1 !important;
+}
