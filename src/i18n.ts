@@ -15,7 +15,13 @@ i18n
         },
         backend: {
             loadPath: '/locales/{{lng}}/{{ns}}.json',
-        }
+        },
+        detection: {
+            order: ['localStorage', 'navigator'], // First check localStorage, then fallback to navigator
+            lookupLocalStorage: 'i18nextLng', // Key name in localStorage
+            caches: ['localStorage'], // Save language to localStorage
+        },
+        lng: localStorage.getItem('i18nextLng')?.split('-')[0] || 'en',
     });
 
 export default i18n;
